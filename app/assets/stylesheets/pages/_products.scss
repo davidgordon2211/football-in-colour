@@ -1,0 +1,39 @@
+.c-products {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+
+    article {
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    padding: 20px;
+    text-align: center;
+    color: $fic-navy;
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $fic-navy;
+      }
+    }
+  }
+}

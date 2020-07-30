@@ -1,3 +1,6 @@
-<% @products.each do |product| %>
-  <%= "#{product.id} - #{product.name} - #{product.price}" %>
-<% end %>
+<div class="container c-container__products">
+  <div class="c-container__products text-center c-home__sub-title">
+    all items
+  </div>
+  <%= render 'partials/products', products: @products %>
+</div>

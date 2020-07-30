@@ -1,0 +1,13 @@
+<main class="c-products__grid">
+  <% products.each do |product| %>
+    <article>
+      <%= cl_image_tag product.image.key, height: 300, width: 400, crop: :fill %>
+      <div class="c-products__text">
+        <h3><%= product.name %></h3>
+        --------------------
+        <p>£<%= product.price %></p>
+        <a class="btn btn-block c-button__add-to-cart c-button__add-to-cartHover">Add to cart</a>
+      </div>
+    </article>
+  <% end %>
+</main>

@@ -1,1 +1,47 @@
-// Specific CSS for your home-page
+.c-home {
+  &__main-photo {
+    background-image: url("michael_thomas.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  &__photo-container {
+    min-height: 50rem;
+    text-align: center;
+  }
+  &__site-logo {
+    padding-top: 15rem;
+    font-size: 5rem;
+    font-weight: 300;
+    color: $fic-black;
+  }
+  &__highlight {
+    color: $fic-pink;
+  }
+  &__sub-title {
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: 20rem;
+    color: $fic-navy;
+  }
+  &__about {
+    background-color: $fic-navy;
+    padding-bottom: 2rem;
+  }
+  &__about-title {
+    padding-top: 2rem;
+    font-size: 2rem;
+    color: $fic-pink;
+  }
+  &__about-info {
+    font-size: 1rem;
+    color: $fic-champagne
+  }
+  &__contact {
+    padding-bottom: 2rem;
+  }
+  &__contact-title {
+    padding-top: 2rem;
+    font-size: 2rem;
+    color: $fic-navy;
+  }
+}

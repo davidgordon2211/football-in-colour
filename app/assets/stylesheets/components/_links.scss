@@ -1,0 +1,8 @@
+.c-links {
+  &__main {
+    color: $fic-pink;
+    &:hover {
+      color: $fic-blue;
+    }
+  }
+}

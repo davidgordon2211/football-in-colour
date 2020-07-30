@@ -1,15 +1,17 @@
-<%= form_for @product do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<br><br>
-<%= f.label :price %>
-<%= f.number_field :price %>
-<br><br>
-<%= f.label :description %>
-<%= f.text_area :description %>
-<br><br>
-<%= f.label :image %>
-<%= f.file_field :image %>
-<br><br>
-<%= f.submit 'Add' %>
-<% end %>
+<div class="container">
+  <%= form_for @product do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br><br>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+    <br><br>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <br><br>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <br><br>
+    <%= f.submit 'Add' %>
+  <% end %>
+</div>

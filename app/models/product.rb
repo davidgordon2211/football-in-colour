@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
   validate :name
   validate :price
-  validate :image
+  has_one_attached :image
 end

@@ -1,6 +1,36 @@
-<% if current_user %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign In", new_user_session_path %>
-  <%= link_to  "Sign Up", new_user_registration_path %>
-<% end %>
+<div class= "c-home__main-photo">
+  <div class="c-home__photo-container">
+    <div class="c-home__site-logo">
+      football in <span class="c-home__highlight">colour</span>
+      <div class="c-home__sub-title">
+        beautiful moments. beautiful designs.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container c-container__products">
+  <div class="c-container__products text-center c-home__sub-title">
+    featured items
+  </div>
+  <%= render 'partials/products', products: @products %>
+</div>
+
+<div class="c-home__about">
+  <div class="container">
+    <div class="text-center c-home__about-title">
+      about
+      <div class="c-home__about-info">
+        stuff about our football in colour site stuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour sitestuff about our football in colour site
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="c-home__contact">
+  <div class="container">
+    <div class="text-center c-home__contact-title">
+      contact
+    </div>
+  </div>
+</div>
