@@ -17,7 +17,9 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
-  def show; end
+  def show
+    @products = Product.where.not(id: @product.id).sample(3)
+  end
 
   def edit; end
 

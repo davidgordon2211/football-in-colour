@@ -1,7 +1,9 @@
 <main class="c-products__grid">
   <% products.each do |product| %>
     <article>
-      <%= cl_image_tag product.image.key, height: 300, width: 400, crop: :fill %>
+      <%= link_to product_path(product) do %>
+        <%= cl_image_tag product.image.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
       <div class="c-products__text">
         <h3><%= product.name %></h3>
         --------------------

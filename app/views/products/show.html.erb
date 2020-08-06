@@ -1,11 +1,43 @@
 <div class="container">
-  <%= @product.name %>
-  <br>
-  <%= cl_image_tag @product.image.key, height: 300, width: 400, crop: :fill %>
-  <br>
-  <%= @product.price %>
-  <br>
-  <%= @product.description %>
-  <br>
-  <%= link_to 'Add another product', new_product_path %>
+  <div class="row c-container__products">
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= cl_image_tag @product.image.key %>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @product.image.key %>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @product.image.key %>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col c-product__info">
+      <h3><%= @product.name %></h3>
+      <h5>£<%= @product.price %></h5>
+      <hr>
+      <p><%= @product.description %></p>
+      <div>
+        <button class="btn btn-block c-button__add-to-cart c-button__add-to-cartHover">Add to cart</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="c-product__other-items">
+    <div class="c-product__other-items text-center c-home__sub-title">
+      you may also like
+    </div>
+    <%= render 'partials/products', products: @products %>
+  </div>
 </div>
