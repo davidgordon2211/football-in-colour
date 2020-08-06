@@ -34,6 +34,7 @@ gem 'devise'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
+gem 'mini_magick'
 gem 'rubocop', require: false
 gem 'rubocop-performance', require: false
 gem 'rubocop-rails', require: false

@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :products
+  resources :line_items
+  resources :carts
 end
