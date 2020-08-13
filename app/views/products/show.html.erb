@@ -29,7 +29,7 @@
       <hr>
       <p><%= @product.description %></p>
       <div>
-        <button class="btn btn-block c-button__add-to-cart c-button__add-to-cartHover">Add to cart</button>
+        <%= button_to 'Add to cart', line_items_path(product_id: @product), class: "btn btn-block c-button__add-to-cart c-button__add-to-cartHover" %>
       </div>
     </div>
   </div>

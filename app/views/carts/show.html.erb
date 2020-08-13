@@ -1,9 +1,19 @@
 <div class="keep-shopping pv1 mt4 has-text-right">
-  <%= link_to 'Keep Shopping', instruments_path, class: 'button is-warning' %>
+  <%= link_to 'Keep Shopping', products_path, class: 'button is-warning' %>
 </div>
 <hr />
 <section class="section">
-  <%= render(@cart.line_items) %>
+  <% @cart.line_items.each do |line_item| %>
+    <%= link_to product_path(line_item.product) do %>
+      <%= cl_image_tag line_item.image.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+    <div class="c-products__text">
+      <h3><%= line_item.name %></h3>
+      --------------------
+      <p>£<%= line_item.price %></p>
+      <p>Quantity: <%= line_item.quantity %></p>
+    </div>
+  <% end %>
 
   <div class="columns">
     <div class="column">
